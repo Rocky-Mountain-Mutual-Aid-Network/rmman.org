@@ -1,5 +1,5 @@
-# frman.org
-Front Range Mutual Aid Network
+# rmman.org
+Rocky Mountain Mutual Aid Network
 
 This website is a super simple flat HTML site that is hosted (for free) using GitHub Pages. 
 Just copy the content out of index.html and swap out the Google Doc URL from the script at the bottom.
