@@ -4,11 +4,90 @@ html { box-sizing: border-box }
 html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl,
 dt, dd, blockquote, address { margin: 0; padding: 0 }
 
+html {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',sans-serif;
+}
+
+p:not(:last-of-type) {
+    margin-bottom: 1em;
+}
+
+/* Responsive helpers (mobile first!) */
+
+@media screen and (min-width: 736px) {
+    .show-mobile {
+        display: none;
+    }
+}
+
+/* NAV */
+nav {
+    display: flex;
+    padding: 2px;
+}
+nav a {
+    background-color: #bed1f5;
+    padding: 4px 1rem;
+    margin: 0 2px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #9ab8f1;
+}
+nav .btn--donate {
+    background-color: darkred;
+    color:white;
+    margin-left: auto;
+}
+
+nav .btn--donate:hover {
+    background-color: darkviolet;
+}
+
+/* Notice */
+.notice {
+    background-color: #dde;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+
+/* Page Intro */
+
+.intro {
+    padding: 2rem;
+}
+.intro--2up {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+}
+.intro--2up .intro__content {
+    padding: 1rem;
+    flex: 1 0 300px;
+}
+
+
+.intro__content {
+    max-width: 65ch;
+}
+.intro__content--left {
+}
+.intro__content--right {
+    
+}
+
+
 /* Google Doc Embedding */
 .gdoc--import {
-    padding: 15px;
+    padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
+}
+
+.gdoc--align-left {
+    margin-left: 0;
 }
 
 /* Google Doc iframe fallback */
@@ -27,4 +106,16 @@ body.iframe {
 .gdoc--iframe iframe {
     width: 100%;
     border: 0;
+}
+
+/* AirTable Embeds */
+body.airtable--fill {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+.airtable-embed {
+    display: flex;
+    flex: 1 1 auto;
 }
