@@ -37,28 +37,10 @@
     </style>
 </head>
 <body>
-    <div id="doc">
+    <div id="doc" data-gdoc-url="https://docs.google.com/document/d/e/2PACX-1vT5gCxJy7b1abHTQ0AKOFCYbssHDy1pVQyjJmBvsRrwA1T7GiULwaENsv2k_Mfwj8xYdBEiQzvJtD8N/pub">
         Loading...
     </div>
-    <script>
-        var html = document.createElement('html');
-        var iframe = '<iframe class="doc" src="https://docs.google.com/document/d/e/2PACX-1vT5gCxJy7b1abHTQ0AKOFCYbssHDy1pVQyjJmBvsRrwA1T7GiULwaENsv2k_Mfwj8xYdBEiQzvJtD8N/pub?embedded=false"></iframe>';
-        var url = 'https://docs.google.com/document/d/e/2PACX-1vT5gCxJy7b1abHTQ0AKOFCYbssHDy1pVQyjJmBvsRrwA1T7GiULwaENsv2k_Mfwj8xYdBEiQzvJtD8N/pub';
-        var d = document.getElementById('doc');
-        // CORS request
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', url, true);
-        xhr.onload = function () {
-            // add response to node
-            html.innerHTML = xhr.responseText;
-            d.innerHTML = html.getElementsByTagName('div')["contents"].innerHTML;
-            d.classList.add("wrapper");
-        };
-        xhr.onerror = function () {
-            document.body.id = 'iframe';
-            d.innerHTML = iframe;
-        }
-        xhr.send();
-    </script>
+    
+    <script src="/script-google-doc.js"></script>
 </body>
 </html>
