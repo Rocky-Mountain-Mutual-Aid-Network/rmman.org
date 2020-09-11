@@ -1,0 +1,30 @@
+/* Set Box Sizing learn more: https://css-tricks.com/box-sizing/ */
+html { box-sizing: border-box }
+*, *:before, *:after { box-sizing: inherit }
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl,
+dt, dd, blockquote, address { margin: 0; padding: 0 }
+
+/* Google Doc Embedding */
+.gdoc--import {
+    padding: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Google Doc iframe fallback */
+/* WARNING: too much content height above the iframe will cause it to shrink */
+body.iframe {
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+}
+
+.gdoc--iframe {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.gdoc--iframe iframe {
+    width: 100%;
+    border: 0;
+}

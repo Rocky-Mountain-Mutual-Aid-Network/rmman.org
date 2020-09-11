@@ -28,5 +28,8 @@ To add Google Doc content you'll need to do the following:
 <script src="/script-google-doc.js"></script>
 ```
 
-**Gotchas:** Make sure you use the published url and not the document's edit url with the `data-gdoc-url` attribute!
+**Gotchas:** 
 
+* Make sure you use the published url and not the document's edit url with the `data-gdoc-url` attribute!
+* If the document content doesn't load an iframe will be put in it's place, this might cause issues if you have other content in the `<body>`
+* When the document is pulled from Google you'll also get the document's style sheet!
