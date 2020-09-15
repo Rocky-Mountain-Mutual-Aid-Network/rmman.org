@@ -42,6 +42,8 @@ function request(url) {
         html.innerHTML = xhr.responseText;
         // grab only the contents from the returned Google Doc html
         d.innerHTML = html.getElementsByTagName('div')["contents"].innerHTML;
+        // removes the 1st element (should be the <style> tag)
+        d.removeChild(d.firstElementChild)
         // TODO: option to remove imported style
         // add a class to loading div
         d.classList.add("gdoc--import");

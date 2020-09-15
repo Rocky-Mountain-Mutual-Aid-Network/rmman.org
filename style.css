@@ -31,18 +31,6 @@ nav a {
 
 .card {padding: 1rem; box-shadow:none;}
 
-
-/* Google Doc Embedding */
-.gdoc--import {
-    padding: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.gdoc--align-left {
-    margin-left: 0;
-}
-
 /* Google Doc iframe fallback */
 /* WARNING: too much content height above the iframe will cause it to shrink */
 body.iframe {
