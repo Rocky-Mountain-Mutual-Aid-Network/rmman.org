@@ -1,22 +1,7 @@
-/* Set Box Sizing learn more: https://css-tricks.com/box-sizing/ */
-html { box-sizing: border-box }
-*, *:before, *:after { box-sizing: inherit }
-html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl,
-dt, dd, blockquote, address { margin: 0; padding: 0 }
-
-
-html, body {font-family: 'Kumbh Sans' !important, sans-serif;}
+html body {font-family: 'Kumbh Sans', sans-serif;}
 
 p:not(:last-of-type) {
     margin-bottom: 1em;
-}
-
-/* Responsive helpers (mobile first!) */
-
-@media screen and (min-width: 736px) {
-    .show-mobile {
-        display: none;
-    }
 }
 
 /* NAV */
@@ -45,31 +30,6 @@ nav a {
 .cards .card h2 {margin-left: 2rem;}
 
 .card {padding: 1rem; box-shadow:none;}
-/* Page Intro */
-
-.intro {
-    padding: 2rem;
-}
-.intro--2up {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 1rem;
-}
-.intro--2up .intro__content {
-    padding: 1rem;
-    flex: 1 0 300px;
-}
-
-
-.intro__content {
-    max-width: 65ch;
-}
-.intro__content--left {
-}
-.intro__content--right {
-
-}
 
 
 /* Google Doc Embedding */
