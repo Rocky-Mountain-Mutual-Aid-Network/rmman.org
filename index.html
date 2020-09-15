@@ -13,23 +13,24 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
-    
+    <link rel="stylesheet" href="/bulma.min.css">
     <link rel="stylesheet" href="/style.css">
+    <link href= "https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Montserrat&display=swap" rel= "stylesheet">
 </head>
 <body>
-    <nav>
-        <a href="/" class="logo">RMMAN</a>
-        <a href="/volunteer.html">Volunteer</a>
-        <a href="/request.html">Request Help</a>
-        <a href="/match.html">Help Now!</a>
-        <a href="/covid.html">COVID Resources</a>
-        <a href="/pod.html">Neighborhood Pods</a>
-        <a href="https://opencollective.com/rmman" class="btn--donate" target="_blank">Donate!</a>
+    <nav class="navbar">
+        <a href="/" class="navbar-brand">RMMAN</a>
+        <a href="/volunteer.html" class="navbar-item">Volunteer</a>
+        <a href="/request.html" class="navbar-item">Request Help</a>
+        <a href="/match.html" class="navbar-item">Help Now!</a>
+        <a href="/covid.html" class="navbar-item">COVID Resources</a>
+        <a href="/pod.html" class="navbar-item">Neighborhood Pods</a>
+        <a href="https://opencollective.com/rmman" class="navbar-end" target="_blank"><button class= "button is-success">Donate! </button></a>
     </nav>
 
-    <h1>Rocky Mountain Mutual Aid Network</h1>
+    <h1 class="main-title">Rocky Mountain Mutual Aid Network</h1>
 
-    <div class="cards">
+    <div class="cards column is-full">
         <div class="card">
             <h2>Need Help?</h2>
             <p>Fill out our form and be matched with a volunteer who can support you!</p>
@@ -56,11 +57,7 @@
             <a href="/pod.html" class="btn">See Resources</a>
         </div>
     </div>
-
-    <div id="doc" class="gdoc" data-gdoc-url="https://docs.google.com/document/d/e/2PACX-1vQUhG21mO6ahV6njQ6RB3lA_94LFoilOvganxxtFIZsd4GXfiZWwUNJMwwcR4B6av6KvBMwZ7xXq0oh/pub">
-        Loading...
-    </div>
-
-    <script src="/script-google-doc.js"></script>
+    <div id="doc" class="gdoc" data-gdoc-url="https://docs.google.com/document/d/e/2PACX-1vQUhG21mO6ahV6njQ6RB3lA_94LFoilOvganxxtFIZsd4GXfiZWwUNJMwwcR4B6av6KvBMwZ7xXq0oh/pub"> Loading... </div>
+<script src="/script-google-doc.js"></script>
 </body>
 </html>

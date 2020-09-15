@@ -4,9 +4,8 @@ html { box-sizing: border-box }
 html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl,
 dt, dd, blockquote, address { margin: 0; padding: 0 }
 
-html {
-    font-family: -apple-system,system-ui,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',sans-serif;
-}
+
+html, body {font-family: 'Kumbh Sans' !important, sans-serif;}
 
 p:not(:last-of-type) {
     margin-bottom: 1em;
@@ -26,22 +25,10 @@ nav {
     padding: 2px;
 }
 nav a {
-    background-color: #bed1f5;
+
     padding: 4px 1rem;
     margin: 0 2px;
     text-decoration: none;
-}
-nav a:hover {
-    background-color: #9ab8f1;
-}
-nav .btn--donate {
-    background-color: darkred;
-    color:white;
-    margin-left: auto;
-}
-
-nav .btn--donate:hover {
-    background-color: darkviolet;
 }
 
 /* Notice */
@@ -51,7 +38,13 @@ nav .btn--donate:hover {
     padding: 1rem;
 }
 
+/* Home */
+.main-title {margin-left: 1rem; margin-top: 0.25rem; font-size:2rem;}
+.cards .card p, .cards .card a{ margin-left: 3rem;}
 
+.cards .card h2 {margin-left: 2rem;}
+
+.card {padding: 1rem; box-shadow:none;}
 /* Page Intro */
 
 .intro {
@@ -75,7 +68,7 @@ nav .btn--donate:hover {
 .intro__content--left {
 }
 .intro__content--right {
-    
+
 }
 
 
