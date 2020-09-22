@@ -1,35 +1,110 @@
 ---
 title: Home
+heading: Welcome to the Rocky Mountain Mutual Aid Network (RMMAN)!
 ---
-<div class="columns">
-    <div class="column">
-        <h2>Need Help?</h2>
-        <p>Fill out our form and be matched with a volunteer who can support you!</p>
-        {% include btn.html href="/request" class="" text="Request Help" %}
+
+<div class="columns mt-6 is-6 is-variable">
+    <div class="column is-half">
+        <figure class="image is-128x128 is-pulled-right">
+            <img src="/assets/brand/rmman-logo-simple.jpg">
+        </figure>
+        <p class="is-size-5">
+            RMMAN is a network of Coloradans providing direct aid and
+            assistance to those who need it most during these challenging times. Our platform makes it easy and rewarding to
+            directly help those in need and to receive aid and support yourself!
+        </p>
+        
+        <h2 class="title is-5">What is ‘mutual aid’? How is it different from charity or government assistance?</h2>
+        
+        <p>
+            Please watch <a href="https://www.youtube.com/watch?v=RF-6DTX8ztI" target="_blank">this 3-minute video for a quick overview</a>. The key is that mutual aid is based on the fact that we are all
+            interdependent on one another in a society. Therefore we should seek to provide aid to those who need it when we have
+            the means and, in turn, to seek aid from those in our community when we need a little help ourselves. We can do this
+            ourselves! There doesn’t need to be a government, bureaucracy or tax-exempt non-profit organizing this work. We can
+            build organizations to do this work and to empower our communities to help one another! RMMAN strives to be an example
+            of this.
+        </p>
+        
+        <p>
+            Below are some of the ways you can get involved.
+        </p>
+
+        <br>
+        <br>
+
+        {% include btn.html href="https://opencollective.com/rmman" class="is-primary is-large" text="Donate / Become a Supporter" %}
     </div>
-    <div class="column">
-        <h2>Volunteer</h2>
-        <p>Fill out the volunteer form and we'll match you with people in your area who need support.</p>
-        {% include btn.html href="/volunteer" class="" text="Volunteer to Help" %}
-    </div>
-    <div class="column">
-        <h2>Help Now!</h2>
-        <p>See a public list of people asking for help, provide it for them directly!</p>
-        {% include btn.html href="/match" class="" text="Match now!" %}
-    </div>
-</div>
-<div class="columns">
-    <div class="column">
-        <h2>Covid Resources</h2>
-        <p>A publically editable list of COVID support resources.</p>
-        {% include btn.html href="/covid" class="" text="See Resources" %}
-    </div>
-    <div class="column">
-        <h2>Neighborhood Pods</h2>
-        <p>Find or start your own neighborhood pod!</p>
-        {% include btn.html href="/pod" class="" text="Join a Pod" %}
+    <div class="column is-one-third">
+
+        <h2 class="title is-4">
+            Sign up to Request Aid
+        </h2>
+
+        <p>
+            Do you need help with groceries? Someone to run errands for you? A little help with rent or other necessities? Let us know here.
+        </p>
+
+        <p>
+            {% include btn.html href="/request" class="is-success is-large" text="Request Aid" %}
+        </p>
+
+        <h2 class="title is-4">
+            Sign up to Offer Aid
+        </h2>
+
+        <p>
+            Are you looking to offer help and provide direct aid and assistance to your neighbors and fellow Coloradans? Sign up to
+            offer assistance here.
+        </p>
+
+        <p>
+            {% include btn.html href="/request" class="is-info is-large" text="Offer Aid" %}
+        </p>
+
     </div>
 </div>
 
-    {% include google-doc.html url="https://docs.google.com/document/d/e/2PACX-1vQUhG21mO6ahV6njQ6RB3lA_94LFoilOvganxxtFIZsd4GXfiZWwUNJMwwcR4B6av6KvBMwZ7xXq0oh/pub" %}
+<hr>
+
+<div class="columns content">
+    <div class="column">
+        <h2 class="title">
+            View The Public Aid Requests Board
+        </h2>
+
+        <p>
+            {% include btn.html href="/match" class="is-success" text="Financial Aid Requests Board" %}
+        </p>
+
+        <p>
+            {% include btn.html href="/match" class="is-warning" text="Non-Financial Aid Requests Board" %}
+        </p>
+
+    </div>
+    <div class="column">
+
+        <h2 class="title">
+            Help us Build a Better World
+        </h2>
+
+        <p>
+            The Rocky Mountain Mutual Aid Network (RMMAN) is dedicated to organizing and supporting mutual aid efforts across the
+            Mountain West. We are looking for organizers to help us build a better world based on mutual aid, solidarity and
+            community support.
+        </p>
+
+        <p>
+            {% include btn.html href="/volunteer" class="is-link" text="Volunteer" %}
+        </p>
+    </div>
+</div>
+
+
+<hr>
+
+<div class="columns">
+    <div class="column is-half">
+        {% include google-doc.html url="https://docs.google.com/document/d/e/2PACX-1vQUhG21mO6ahV6njQ6RB3lA_94LFoilOvganxxtFIZsd4GXfiZWwUNJMwwcR4B6av6KvBMwZ7xXq0oh/pub" %}
+    </div>
+</div>
 
