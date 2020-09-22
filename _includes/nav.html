@@ -1,10 +1,32 @@
-<nav class="navbar">
-    <a href="/" class="navbar-brand">RMMAN</a>
-    <a href="{{ 'volunteer.html' | relative_url }}" class="navbar-item">Volunteer</a>
-    <a href="{{ 'request.html' | relative_url }}" class="navbar-item">Request Help</a>
-    <a href="{{ 'match.html' | relative_url }}" class="navbar-item">Help Now!</a>
-    <a href="{{ 'covid.html' | relative_url }}" class="navbar-item">COVID Resources</a>
-    <a href="{{ 'pod.html' | relative_url }}" class="navbar-item">Neighborhood Pods</a>
-    <a href="https://opencollective.com/rmman" class="navbar-end" target="_blank"><button
-            class="button is-success">Donate! </button></a>
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a href="/" class="navbar-item">
+            <img src="{{ '/assets/brand/rmman-logo-website.png' | relative_url }}" alt="RMMAN">
+        </a>
+    </div>
+    <div class="navbar-start">
+        
+        <div class="navbar-item">
+            <div class="buttons">
+                <a href="{{ 'request.html' | relative_url }}" class="button is-success">Request Aid</a>
+                <a href="{{ 'helper.html' | relative_url }}" class="button is-info">Offer Aid</a>
+            </div>
+        </div>
+        <a href="{{ 'match.html' | relative_url }}" class="navbar-item">View Requests</a>
+        <a href="{{ 'covid.html' | relative_url }}" class="navbar-item">COVID Resources</a>
+        <a href="{{ 'pod.html' | relative_url }}" class="navbar-item">Neighborhood Pods</a>
+    </div>
+    <div class="navbar-end">
+        <div class="navbar-item">
+            <div class="buttons">
+                <a href="{{ 'volunteer.html' | relative_url }}" class="button is-light">Volunteer</a>
+                <a href="https://opencollective.com/rmman" class="button is-primary" target="_blank">Donate!</a>
+            </div>
+        </div>
+    </div>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
 </nav>
