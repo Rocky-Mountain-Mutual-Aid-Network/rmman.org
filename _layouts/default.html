@@ -4,7 +4,7 @@ layout: base
 
 <section class="section">
     <div class="container">
-        {% if page.title %}<h1 class="title">{{ page.title }}</h1>{% endif %}
+        {% unless page.hideTitle %}<h1 class="title">{{ page.heading | default: page.title }}</h1>{% endunless %}
 
         {{ content }}
     </div>
