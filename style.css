@@ -16,6 +16,14 @@ nav a {
     text-decoration: none;
 }
 
+@media only screen and (max-width: 600px) {
+    nav .navbar-brand .button {
+        padding: 0 0.25rem;
+    }
+    nav .navbar-brand .logo {
+        width: 9rem;
+    }}
+
 /* Notice */
 .notice {
     background-color: #dde;

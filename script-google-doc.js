@@ -1,13 +1,13 @@
 /**
  * Name: Google Doc Loading Script
  * Author: Drew Hornbein
- * 
+ *
  * This script replaces a html element with the HTML content of a *published* Google Document
  * Checkout the README to learn how to setup your Google Doc
  * Add id="doc" to the element you wish to replace
  * Add a data variable data-gdoc-url=""" to the element with the Google Doc PUBLISHED URL
  * this script will extract the ID
- * 
+ *
  * Example:
  * <div id="doc" data-gdoc-url="https://docs.google.com/document/d/e/2PACX-1vT5gCxJy7b1abHTQ0AKOFCYbssHDy1pVQyjJmBvsRrwA1T7GiULwaENsv2k_Mfwj8xYdBEiQzvJtD8N/pub">Loading...</div>
  */

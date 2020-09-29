@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>{{ page.title }} | {{ site.title }}</title>
-    
+
     <meta property="og:type" content="business.business">
     <meta property="og:title" content="{{ page.title }}">
     <meta property="og:url" content="https://rmman.org">
@@ -16,14 +16,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/favicon/favicon-32x32.png' | relative_url }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/favicon/favicon-16x16.png' | relative_url }}">
     <link rel="manifest" href="{{ 'assets/favicon/site.webmanifest' | relative_url }}">
-    
+
     <link rel="stylesheet" href="{{ 'bulma.min.css' | relative_url }}">
     <link rel="stylesheet" href="{{ 'style.css' | relative_url }}">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Montserrat&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="has-navbar-fixed-top">
 
     {% include nav.html %}
 
