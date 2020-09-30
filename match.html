@@ -1,15 +1,55 @@
 ---
 title: Unfulfilled Needs
 ---
+
+<div class="tabs is-boxed is-medium is-hidden-mobile">
+    <ul>
+        <li class="is-active">
+            <a>
+                ⛑ Non-Finacial Requests
+            </a>
+        </li>
+        <li>
+            <a href="{{ 'match-financial.html' | relative_url }}">
+                💲 Finacial Requests
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="is-hidden-tablet">
+    {% include btn.html href="" class="is-disabled is-fullwidth mb-2" text="⛑ Non-Finacial Requests" %}
+    {% include btn.html href="/match-financial" class="is-success is-fullwidth mb-2" text="💲 Finacial Requests" %}
+</div>
+
 <div class="columns">
     <div class="column">
 
-- Instructions to come
+        <h1 class="title">What am I looking at?</h1>
+
+        <p>
+            The gallery below shows a list of current requests from individuals in the Rocky Mountain Mutual Aid Network (RMMAN).
+            Each request is numbered and appears as a card below which includes a name, the zip code of the request and some more
+            information about the request.
+        </p>
+
+        <br>
+
+        {% include btn.html href="https://airtable.com/shrjexLEMxfBon8RX" class="is-light" text="View Tabel Full Screen" %}
 
     </div>
-    <div class="column">
+    <div class="column content">
 
-- Instrucciones para venir
+        <h1 class="title">How do I respond to a request?</h1>
+
+        <ol>
+            <li>Find the request (card) below that you are interested in responding to. Click on the card to expand the information and
+            review the details of the request.</li>
+            <li>If you are able to provide the type of assistance requested (in part or in whole), scroll down to the bottom of the card
+            and click the link at the bottom. This will open a new window with a form to provide your contact information.</li>
+            <li>A volunteer ‘matchmaker’ will respond to your offer of assistance to get some more information and then connect you with
+            the individual requesting assistance. Thank you!</li>
+        </ol>
 
     </div>
 </div>

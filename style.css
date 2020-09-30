@@ -34,6 +34,28 @@ nav #navMenu {
     padding: 1rem;
 }
 
+/* Tabs */
+
+@media only screen and (max-width: 600px) {
+    .tabs {
+        font-size: 1rem !important;
+    }
+    .tabs ul {
+        flex-direction: column;
+    }
+    .tabs ul li {
+        width: 100%;
+    }
+    .tabs ul li a {
+        border:none;
+        justify-content: flex-start;
+    }
+    .tabs.is-boxed ul,
+    .tabs li.is-active a {
+        border:none;
+    }
+}
+
 /* Home */
 .main-title {margin-left: 1rem; margin-top: 0.25rem; font-size:2rem;}
 .cards .card p, .cards .card a{ margin-left: 3rem;}
