@@ -1,7 +1,7 @@
 # rmman.org
 Rocky Mountain Mutual Aid Network
 
-This website built in [Jekyll](https://jekyllrb.com/docs) hosted (for free) using GitHub Pages. 
+This website is built in [Jekyll](https://jekyllrb.com/docs) hosted (for free) using GitHub Pages. 
 If you wish to clone this design just fork the repository! 
 
 ## Layouts
@@ -31,7 +31,7 @@ will gracefully fall back to an embedded iframe.
 
 To add Google Doc content you'll need to do the following:
 
-1. Publish your Google Doc - In the doc you want to use as your page content go to `file > publish` and publish the doc, save the link URL for later.
+1. Publish your Google Doc - In the doc if you want to use as your page content go to `file > publish` and publish the doc, save the link URL for later.
 2. include `google-doc.html` to your page
 3. set the `url` attribute of the include to the **published URL** (not the document url!)
 
@@ -42,5 +42,5 @@ To add Google Doc content you'll need to do the following:
 **Gotchas:** 
 
 * Make sure you use the published url and not the document's edit url with the `url` attribute!
-* If the document content doesn't load an iframe will be put in it's place, this might cause issues if you have other content in the `<body>`
+* If the document content doesn't load an iframe, it will be put in it's place, this might cause issues if you have other content in the `<body>`
 * When the document is pulled from Google you'll also get the document's style sheet!
