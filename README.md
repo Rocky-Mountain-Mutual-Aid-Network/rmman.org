@@ -4,6 +4,20 @@ Rocky Mountain Mutual Aid Network
 This website built in [Jekyll](https://jekyllrb.com/docs) hosted (for free) using GitHub Pages. 
 If you wish to clone this design just fork the repository! 
 
+## Social data (Open Graph)
+
+When sharing a page we can set the image, title, and description that shows up on social media. 
+In the `front matter` of a page (the section at the top between the dashes `---`) you can set the
+Open Graph data.
+
+```
+og:
+ title: Help people in need!
+ image: /rmman-graph-image-default.png
+ description: >-
+    Directly help your neighbors in need with a helping hand.
+```
+
 ## Layouts
 
 The default layout for pages is set in the `/_config.yml` file. Unless specified in the front matter with `layout: whatever`.
