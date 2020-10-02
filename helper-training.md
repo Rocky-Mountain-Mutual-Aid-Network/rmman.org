@@ -1,5 +1,6 @@
 ---
 title: Matchmaker Training
+permalink: /helper/training
 ---
 
 [Edit/Comment on the document](https://docs.google.com/document/d/1LyTgtvRHMPlF6MSIRINEAwriVr1nvwyMEpQwGCP1SrE/edit)
