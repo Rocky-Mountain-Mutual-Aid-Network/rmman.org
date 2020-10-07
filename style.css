@@ -4,6 +4,10 @@ p:not(:last-of-type) {
     margin-bottom: 1em;
 }
 
+summary {
+    cursor: pointer;
+}
+
 /* NAV */
 nav {
     display: flex;
