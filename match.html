@@ -6,24 +6,8 @@ og:
  description: Directly help your neighbors in need with a helping hand.
 ---
 
-<div class="tabs is-boxed is-medium is-hidden-mobile">
-    <ul>
-        <li class="is-active">
-            <a>
-                ⛑ Non-Financial Requests
-            </a>
-        </li>
-        <li>
-            <a href="{{ 'match-financial' | relative_url }}">
-                💲 Financial Requests
-            </a>
-        </li>
-    </ul>
-</div>
-
-<div class="is-hidden-tablet">
-    {% include btn.html href="" class="is-disabled is-fullwidth mb-2" text="⛑ Non-Financial Requests" %}
-    {% include btn.html href="/match-financial" class="is-success is-fullwidth mb-2" text="💲 Financial Requests" %}
+<div class="buttons">
+    {% include btn.html href="/match-financial" class="is-success mb-2" text="View 💲 Financial Requests" %}
 </div>
 
 <div class="columns">
@@ -58,10 +42,13 @@ og:
     </div>
 </div>
 
-<div class="notification is-info has-text-centered">
+<div class="notification is-info has-text-centered mb-2">
     Want to post a request here? <a href="/request">Fill out the Request Aid form</a>.
 </div>
 
-<iframe id="form" class="airtable-embed" src="https://airtable.com/embed/shrjexLEMxfBon8RX?backgroundColor=green&viewControls=on"
+</div> <!-- This closes the container from default layout -->
+
+<div class="container--iframe">
+    <iframe id="form" class="airtable-embed" src="https://airtable.com/embed/shrjexLEMxfBon8RX?backgroundColor=green&viewControls=on"
     frameborder="0" onmousewheel="" width="100%" height="533"
-    style="background: transparent; border: 1px solid #ccc;"></iframe>
+    style="background: transparent; border: 1px solid #ccc; height:90vh"></iframe>

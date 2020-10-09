@@ -5,24 +5,9 @@ og:
  title: Help people in need!
  description: Directly help your neighbors in need with some much needed cash.
 ---
-<div class="tabs is-boxed is-medium is-hidden-mobile">
-    <ul>
-        <li>
-            <a href="{{ 'match' | relative_url }}">
-                ⛑ Non-Financial Requests
-            </a>
-        </li>
-        <li class="is-active">
-            <a>
-                💲 Financial Requests
-            </a>
-        </li>
-    </ul>
-</div>
 
-<div class="is-hidden-tablet">
-    {% include btn.html href="/match" class="is-warning is-fullwidth mb-2" text="⛑ Non-Financial Requests" %}
-    {% include btn.html href="/match-financial" class="is-disabled is-fullwidth mb-2" text="💲 Financial Requests" %}
+<div class="buttons">
+    {% include btn.html href="/match" class="is-warning mb-2" text="View ⛑ Non-Financial Requests" %}
 </div>
 
 <div class="columns">
@@ -84,10 +69,13 @@ og:
     </div>
 </div>
 
-<div class="notification is-info has-text-centered">
+<div class="notification is-info has-text-centered mb-2">
     Want to post a request here? <a href="/request">Fill out the Request Aid form</a>.
 </div>
 
+</div> <!-- This closes the container from default layout -->
+
+<div class="container--iframe">
 <iframe id="form" class="airtable-embed" src="https://airtable.com/embed/shr0UKaMNBvvvglWy?backgroundColor=green&viewControls=on"
     frameborder="0" onmousewheel="" width="100%" height="533"
-    style="background: transparent; border: 1px solid #ccc;"></iframe>
+    style="background: transparent; border: 1px solid #ccc; height:90vh"></iframe>
