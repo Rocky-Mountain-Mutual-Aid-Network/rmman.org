@@ -2,7 +2,21 @@
 Rocky Mountain Mutual Aid Network
 
 This website is built in [Jekyll](https://jekyllrb.com/docs) hosted (for free) using GitHub Pages. 
-If you wish to clone this design just fork the repository! 
+If you wish to clone this design just fork the repository!
+
+The website uses some cool features to make it fast and easy for people to edit. Many pages here
+load from Google Documents. For instance [/covid](https://rmman.org/covid) is created from [this Google Doc](https://docs.google.com/document/d/1-0lvs_bWE-yJiS4tCQEBjRPRm96AR79K-74MEXhQV-0/edit).
+
+This allows volunteers to edit the content of the website without having to deal with code!
+
+## Contributing
+
+If you'd like to make edits to the website please fork the repository and make a pull request.
+
+## Bulma CSS Framework
+
+This project uses [Bulma CSS Framework](https://bulma.io/documentation) to add structure and style.
+Please review the documentation and understand how columns, sections, layout, and buttons work.
 
 ## Social data (Open Graph)
 
@@ -53,8 +67,18 @@ To add Google Doc content you'll need to do the following:
 {% include google-doc.html url="https://docs.google.com/document/d/e/2PACX-1vQUhG21mO6ahV6njQ6RB3lA_94LFoilOvganxxtFIZsd4GXfiZWwUNJMwwcR4B6av6KvBMwZ7xXq0oh/pub" %}
 ```
 
+### Document Style
+
+By default the Google Doc's style is stripped from the imported HTML. You can disable this by adding the attribute
+`style="true"` to the include. Like this:
+
+``` html
+{% include google-doc.html style="true" url="https://docs.google.com/document/d/e/2PACX-1vQUhG21mO6ahV6njQ6RB3lA_94LFoilOvganxxtFIZsd4GXfiZWwUNJMwwcR4B6av6KvBMwZ7xXq0oh/pub" %}
+```
+
+**Note**: The style that gets pulled in from Google will influence any other content on the page!
+
 **Gotchas:** 
 
 * Make sure you use the published url and not the document's edit url with the `url` attribute!
 * If the document content doesn't load an iframe, it will be put in it's place, this might cause issues if you have other content in the `<body>`
-* When the document is pulled from Google you'll also get the document's style sheet!
