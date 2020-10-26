@@ -1,0 +1,53 @@
+{% comment %}
+This include makes a newsletter signup form
+
+Optional classes
+class {string} classes to add to the submit button
+size  {string} size of input [small, medium, large] defaults to normal
+
+{% endcomment %}
+
+{% if include.class %}
+    {% assign class = include.class %}
+{% else %}
+    {% assign class = 'is-info' %}
+{% endif %}
+
+{% unless include.size %}
+    {% assign style = 'normal' %}
+{% endunless %}
+
+<!-- Begin Mailchimp Signup Form -->
+<div id="mc_embed_signup">
+    <form action="https://rmman.us10.list-manage.com/subscribe/post?u=da8101634bb561538ca4bb415&amp;id=5f3d68d8ff"
+        method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank"
+        novalidate>
+        <div id="mc_embed_signup_scroll">
+
+            <div id="mce-responses" class="clear">
+                <div class="notification is-danger is-light response" id="mce-error-response" style="display:none"></div>
+                <div class="notification is-success is-light response" id="mce-success-response" style="display:none"></div>
+            </div>
+
+            <br>
+
+            <div class="field is-grouped mc-field-group">
+                <p class="control is-expanded">
+                    <input type="email" value="" name="EMAIL" class="input required email is-{{ include.size }}" placeholder="Your Email" id="mce-EMAIL">
+                </p>
+
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                    <input type="text" name="b_da8101634bb561538ca4bb415_5f3d68d8ff" tabindex="-1" value="">
+                </div>
+
+                <p class="control">
+                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button {{ class }} is-{{ include.size }}">
+                </p>
+            </div>
+
+            
+        </div>
+    </form>
+</div>
+<!--End mc_embed_signup-->
