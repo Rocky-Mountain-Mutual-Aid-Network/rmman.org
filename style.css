@@ -68,6 +68,13 @@ nav #navMenu {
 
 .card {padding: 1rem; box-shadow:none;}
 
+/* Google Doc embed */
+
+.gdoc > div {
+    max-width: none !important;
+    padding: 0;
+}
+
 /* Google Doc iframe fallback */
 /* WARNING: too much content height above the iframe will cause it to shrink */
 body.iframe {
