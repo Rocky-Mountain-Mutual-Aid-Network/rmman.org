@@ -12,23 +12,11 @@
  * <div id="doc" data-gdoc-url="https://docs.google.com/document/d/e/2PACX-1vT5gCxJy7b1abHTQ0AKOFCYbssHDy1pVQyjJmBvsRrwA1T7GiULwaENsv2k_Mfwj8xYdBEiQzvJtD8N/pub">Loading...</div>
  */
 
-// target element ID name
-// TODO: allow for overwrite
-let targetEl = 'doc';
-// target element
-var d = document.getElementById(targetEl);
-
-if (d && d.dataset.gdocUrl) {
-    request(d.dataset.gdocUrl);
-}
-
-// TODO: do something if no url is provided
-
 /**
  * Request - loads google doc
  * @param {string} url the publish URL of a Google Doc
  */
-function request(url) {
+function request(url, style) {
     // build iframe to load as a backup
     const iframe = '<iframe src="' + url + '?embedded=false"></iframe>';
 
@@ -42,9 +30,12 @@ function request(url) {
         html.innerHTML = xhr.responseText;
         // grab only the contents from the returned Google Doc html
         d.innerHTML = html.getElementsByTagName('div')["contents"].innerHTML;
-        // removes the 1st element (should be the <style> tag)
-        d.removeChild(d.firstElementChild)
-        // TODO: option to remove imported style
+
+        if ( ! style ){
+            // removes the 1st element (should be the <style> tag)
+            d.removeChild(d.firstElementChild)
+        }
+
         // add a class to loading div
         d.classList.add("gdoc--import");
     };

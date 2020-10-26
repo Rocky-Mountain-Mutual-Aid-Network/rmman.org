@@ -1,2 +1,35 @@
-<div id="doc" class="gdoc content" data-gdoc-url="{{ include.url }}">Loading...</div>
+{% comment %}
+This include takes a few optional parameters
+
+url     {string} the url to the published Google Doc
+id      {string} the id of the container div, necessary if multiple includes on the same page
+style   {bool}   (defalut true) should they style be stripped from the content?
+
+{% endcomment %}
+
+{% if include.id %}
+    {% assign id = include.id %}
+{% else %}
+    {% assign id = "doc" %}
+{% endif %}
+
+{% unless include.style %}
+    {% assign style = false %}
+{% else %}
+    {% assign style = true %}
+{% endunless %}
+
+<div id="{{ id }}" class="gdoc content" data-gdoc-url="{{ include.url }}">Loading...</div>
 <script src="{{ '/script-google-doc.js' | relative_url }}"></script>
+<script>
+    // target element ID name
+    let targetEl = '{{ id }}';
+    // target element
+    var d = document.getElementById(targetEl);
+
+    if (d && d.dataset.gdocUrl) {
+        request(d.dataset.gdocUrl, {{ style }});
+    }
+
+    // TODO: do something if no url is provided
+</script>
