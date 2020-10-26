@@ -30,17 +30,15 @@ function request(url, style) {
         html.innerHTML = xhr.responseText;
         // grab only the contents from the returned Google Doc html
         d.innerHTML = html.getElementsByTagName('div')["contents"].innerHTML;
-
         if ( ! style ){
             // removes the 1st element (should be the <style> tag)
-            d.removeChild(d.firstElementChild)
+            d.removeChild(d.getElementsByTagName("STYLE")[0])
         }
-
         // add a class to loading div
         d.classList.add("gdoc--import");
     };
     xhr.onerror = function () {
-        // add class to body 
+        // add class to body
         document.body.classList.add("iframe");
         // insert iframe into element
         d.innerHTML = iframe;
