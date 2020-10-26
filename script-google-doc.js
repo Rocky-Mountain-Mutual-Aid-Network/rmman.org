@@ -36,6 +36,12 @@ function request(url, style) {
         }
         // add a class to loading div
         d.classList.add("gdoc--import");
+
+        // FF displays last downloaded favicon regardless of whether it's added to the DOM.
+        // This is a hacky fix that adds another favicon DOM element to replace the Google Doc favicon
+        var link =  document.createElement('link');
+        link.type = 'image/x-icon'; link.rel = 'shortcut icon'; link.href = '/assets/favicon/favicon-32x32.png';
+        document.getElementsByTagName('head')[0].appendChild(link);
     };
     xhr.onerror = function () {
         // add class to body
