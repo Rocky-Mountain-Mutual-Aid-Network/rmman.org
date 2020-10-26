@@ -70,6 +70,10 @@ nav #navMenu {
 
 /* Google Doc embed */
 
+.gdoc {
+    min-height: 100vh;
+}
+
 .gdoc > div {
     max-width: none !important;
     padding: 0;
