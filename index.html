@@ -5,37 +5,27 @@ og:
  title: Rocky Mountain Mutual Aid Network
 ---
 
-<div class="columns mt-6 is-6 is-variable">
-    <div class="column is-half">
+<div class="columns mt-6 is-8 is-variable is-vcentered">
+    <div class="column is-two-third">
         <figure class="image is-128x128 is-pulled-right">
             <img src="/assets/brand/rmman-logo-simple.jpg">
         </figure>
-        <p class="is-size-5">
+        <p class="is-size-5 is-size-6-mobile">
             RMMAN is a network of Coloradans providing direct aid and
             assistance to those who need it most during these challenging times. Our platform makes it easy and rewarding to
             directly help those in need and to receive aid and support yourself!
         </p>
 
-        <h2 class="title is-5">What is ‘mutual aid’? How is it different from charity or government assistance?</h2>
-
-        <p>
-            Please watch <a href="https://www.youtube.com/watch?v=RF-6DTX8ztI" target="_blank">this 3-minute video for a quick overview</a>. The key is that mutual aid is based on the fact that we are all
-            interdependent on one another in a society. Therefore we should seek to provide aid to those who need it when we have
-            the means and, in turn, to seek aid from those in our community when we need a little help ourselves. We can do this
-            ourselves! There doesn’t need to be a government, bureaucracy or tax-exempt non-profit organizing this work. We can
-            build organizations to do this work and to empower our communities to help one another! RMMAN strives to be an example
-            of this.
-        </p>
-
-        <p>
-            Below are some of the ways you can get involved.
-        </p>
-
-        <br>
         <br>
 
-        {% include btn.html href="https://opencollective.com/rmman" class="is-primary is-large is-hidden-mobile" text="Donate / Become a Supporter" %}
-        {% include btn.html href="https://opencollective.com/rmman" class="is-primary is-large is-hidden-tablet" text="Donate" %}
+        <h2 class="title is-5">What is ‘mutual aid’? What are we doing? Watch this:</h2>
+
+        <figure class="image is-16by9">
+            <iframe class="has-ratio"  width="560" height="315" src="https://www.youtube.com/embed/bIoaM95Ops8" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </figure>
+
     </div>
     <div class="column is-one-third">
 
@@ -48,7 +38,7 @@ og:
         </p>
 
         <p>
-            {% include btn.html href="/request" class="is-success is-large" text="Request Aid" %}
+            {% include btn.html href="/request" class="is-success is-large is-fullwidth" text="Request Aid" %}
         </p>
         <hr>
         <h2 class="title is-4">
@@ -61,8 +51,13 @@ og:
         </p>
 
         <p>
-            {% include btn.html href="/helper" class="is-info is-large" text="Offer Aid" %}
+            {% include btn.html href="/helper" class="is-info is-large is-fullwidth" text="Offer Aid" %}
         </p>
+
+        <hr>
+        
+        {% include btn.html href="https://opencollective.com/rmman" class="is-primary is-large is-fullwidth is-hidden-mobile" text="Donate / Become a Supporter" %}
+        {% include btn.html href="https://opencollective.com/rmman" class="is-primary is-large is-fullwidth is-hidden-tablet" text="Donate" %}
 
     </div>
 </div>
