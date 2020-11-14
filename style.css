@@ -20,6 +20,17 @@ nav a {
     text-decoration: none;
 }
 
+nav .button.is-pod {
+    background: #d1215a url(/pods/assets/rmpp-texture-red.jpg) no-repeat center top;
+    font-weight: bold;
+}
+
+nav .button.is-pod:hover,
+nav .button.is-pod.is-active {
+    background-position: center bottom;
+    color: white;
+}
+
 @media only screen and (max-width: 600px) {
     nav .navbar-brand .button {
         padding: 0 0.25rem;

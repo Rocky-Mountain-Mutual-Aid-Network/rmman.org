@@ -1,0 +1,32 @@
+---
+layout: base
+nav:
+ -
+  name: Pods Home
+  url: /pods
+ -
+  name: About
+  url: /pods/about
+ -
+  name: Join Pod
+  url: /pods/join
+ -
+  name: Start Pod
+  url: /pods/start
+ -
+  name: Events
+  url: /pods/events/regenerative-relating-practice
+---
+
+<div class="container mt-6">
+    <div class="tabs">
+        <ul>
+            {% for nav in layout.nav %}
+            <li{% if nav.url == page.url %} class="is-active" {% endif %}><a
+                    href="{{ nav.url }}">{{ nav.name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{{ content }}
