@@ -22,11 +22,15 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Montserrat&display=swap" rel="stylesheet">
 
+    {%- comment -%}
+        add 'comment: true' to the front matter of any 
+        page you wish to display a calendar just add:
+        <div id='calendar'></div>
+    {%- endcomment -%}
     {%- if page.calendar -%}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.css"
             integrity="sha256-ejA/z0dc7D+StbJL/0HAnRG/Xae3yS2gzg0OAnIURC4=" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.js"
-            integrity="sha256-oenhI3DRqaPoTMAVBBzQUjOKPEdbdFFtTCNIosGwro0=" crossorigin="anonymous"></script>
+        <script src="{{ 'assets/js/fullcalendar-5.4.0.min.js' | relative_url }}"></script>
         <script src="{{ 'assets/js/script-calendar.js' | relative_url }}"></script>
     {%- endif -%}
 </head>
