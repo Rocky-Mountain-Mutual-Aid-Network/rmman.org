@@ -82,3 +82,11 @@ By default the Google Doc's style is stripped from the imported HTML. You can di
 
 * Make sure you use the published url and not the document's edit url with the `url` attribute!
 * If the document content doesn't load an iframe, it will be put in it's place, this might cause issues if you have other content in the `<body>`
+
+# Calendars
+
+We use [Full Calendar](https://fullcalendar.io/) to import and display our Google Calendar feeds. If you would like to add a calendar this can be done by appending the `eventSources` within the `/assets/js/script-calendar.js` file.
+
+Adding a Google Calendar requires you make that calendar public and find it's "Calendar Address". [Check out Full Calendar's docs for more details on how to do this](https://fullcalendar.io/docs/google-calendar).
+
+You must add `calendar: true` to the front matters of the page you wish to display it on.
