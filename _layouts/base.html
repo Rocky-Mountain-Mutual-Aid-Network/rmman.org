@@ -21,6 +21,14 @@
     <link rel="stylesheet" href="{{ 'style.css' | relative_url }}">
 
     <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&family=Montserrat&display=swap" rel="stylesheet">
+
+    {%- if page.calendar -%}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.css"
+            integrity="sha256-ejA/z0dc7D+StbJL/0HAnRG/Xae3yS2gzg0OAnIURC4=" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.4.0/main.min.js"
+            integrity="sha256-oenhI3DRqaPoTMAVBBzQUjOKPEdbdFFtTCNIosGwro0=" crossorigin="anonymous"></script>
+        <script src="{{ 'assets/js/script-calendar.js' | relative_url }}"></script>
+    {%- endif -%}
 </head>
 
 <body class="has-navbar-fixed-top">

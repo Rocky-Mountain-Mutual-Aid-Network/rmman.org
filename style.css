@@ -79,6 +79,22 @@ nav #navMenu {
 
 .card {padding: 1rem; box-shadow:none;}
 
+/* Calendar */
+
+.event-card {
+    margin-top: 1em;
+}
+.event-card__description {
+    margin-top: 1em;
+    word-break: break-word;
+    max-width: 55ch;
+}
+@media screen and (max-width: 450px) {
+    .fc .fc-list-event-time {
+        white-space: normal;
+    }
+}
+
 /* Google Doc embed */
 
 .gdoc {
