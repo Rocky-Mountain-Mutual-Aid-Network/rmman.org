@@ -87,6 +87,23 @@ By default the Google Doc's style is stripped from the imported HTML. You can di
 
 We use [Full Calendar](https://fullcalendar.io/) to import and display our Google Calendar feeds. If you would like to add a calendar this can be done by appending the `eventSources` within the `/assets/js/script-calendar.js` file.
 
+You must add `calendar: true` to the front matters of the page you wish to display it on along with an element with an id of `calendar`. Like so:
+
+```
+<div id='calendar'></div>
+```
+
+## Adding Calendar Source
+
+At the top of `/assets/js/script-calendar.js` is an Object `calendarEventSources` which contains [FullCalendar.js Event Objects](https://fullcalendar.io/docs/event-source-object). Event Objects added to this will be available to the calendar.
+
 Adding a Google Calendar requires you make that calendar public and find it's "Calendar Address". [Check out Full Calendar's docs for more details on how to do this](https://fullcalendar.io/docs/google-calendar).
 
-You must add `calendar: true` to the front matters of the page you wish to display it on.
+## Choosing Calendar Source
+
+We can select which calendars are displayed on a particular calendar by adding `data-event-source` to the HTML element with the `calendar` id. Simply add a comma separated
+list of key names from the `calendarEventSources` Object found in `/assets/js/script-calendar.js`. For example if I only wanted to show the the `rmpp` and `rmman` calendars I can drop in my calendar element like so:
+
+```
+<div id='calendar' data-event-source="rmpp,rmman"></div>
+```

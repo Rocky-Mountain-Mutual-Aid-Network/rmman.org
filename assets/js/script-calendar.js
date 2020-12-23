@@ -1,6 +1,47 @@
+const calendarEventSources = {
+    rmman: {
+        // RMMAN Calendar
+        googleCalendarId: 'qsd8s5h8e961hleuu7ogvu1dks@group.calendar.google.com',
+        displayEventTime: true,
+        className: 'event-rmman',
+    },
+    rmpp: {
+        // RMPP Calendar
+        googleCalendarId: 'c_o4v9pvg07qd9fse0n7sn0ligts@group.calendar.google.com',
+        displayEventTime: true,
+        className: 'event-rmpp',
+        color: "#960F43",
+    },
+    joys: {
+        // Joy's Kitchen
+        googleCalendarId: '303joyskitchen@gmail.com',
+        displayEventTime: true,
+        className: 'event-joy',
+        color: '#3ec46d',
+    }
+};
+
 document.addEventListener('DOMContentLoaded', function () {
 
-    let calendarEl = document.getElementById('calendar');
+    let calendarEl = document.getElementById('calendar'),
+        calEvents = calendarEl.dataset.eventSource,
+        calSources = [];
+
+    // builds array of calenders to display
+    // add data-event-source="rmpp,rmman" with comma separated list of
+    // calendars which appear in calendarEventSources object above
+    if (calEvents) {
+        // if calEvents has data split it and push it into calEvents
+        calEvents.split(',').forEach((el) => {
+            if (calendarEventSources[el]) calSources.push(calendarEventSources[el]);
+        });
+    } else {
+        // Return all event source values
+        calSources =  Object.values(calendarEventSources);
+    };
+
+    // send an error if calSources is empty
+    if (calSources.length < 1) console.error("The calendar source is empty, if you are using data-event-source be sure the name matches a key in calendarEventSources found in /assets/js/script-calendar.js");
 
     let calendar = new FullCalendar.Calendar(calendarEl, {
         contentHeight: 'auto',
@@ -15,35 +56,14 @@ document.addEventListener('DOMContentLoaded', function () {
         views: {
             listDays: {
                 type: 'list',
-                duration: { days: 7 },
+                duration: { days: 14 },
                 buttonText: 'Agenda'
             }
         },
 
-        googleCalendarApiKey: 'AIzaSyAJGqw59earJuG0-nprn5LtuVt-62L00-s',
+        eventSources: calSources,
 
-        eventSources: [
-            {
-                // RMMAN Calendar
-                googleCalendarId: 'qsd8s5h8e961hleuu7ogvu1dks@group.calendar.google.com',
-                displayEventTime: true,
-                className: 'event-rmman',
-            },
-            {
-                // RMPP Calendar
-                googleCalendarId: 'c_o4v9pvg07qd9fse0n7sn0ligts@group.calendar.google.com',
-                displayEventTime: true,
-                className: 'event-rmpp',
-                color: "#960F43",
-            },
-            {
-                // Joy's Kitchen
-                googleCalendarId: '303joyskitchen@gmail.com',
-                displayEventTime: true,
-                className: 'event-joy',
-                color: '#3ec46d',
-            }
-        ],
+        googleCalendarApiKey: 'AIzaSyAJGqw59earJuG0-nprn5LtuVt-62L00-s',
 
         eventDidMount: function (info) {
             // fires when event mounts
