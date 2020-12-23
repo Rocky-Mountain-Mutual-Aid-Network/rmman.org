@@ -18,6 +18,11 @@ If you'd like to make edits to the website please fork the repository and make a
 This project uses [Bulma CSS Framework](https://bulma.io/documentation) to add structure and style.
 Please review the documentation and understand how columns, sections, layout, and buttons work.
 
+## Permalinks
+
+You can configure a page's permalink by added `permalink: /link/you/want/` to the front matter. Be aware! You'll
+want to add a trailing slash due to GitHub page's link handling quirks.
+
 ## Social data (Open Graph)
 
 When sharing a page we can set the image, title, and description that shows up on social media. 
