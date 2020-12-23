@@ -8,25 +8,35 @@ og:
  image: /pods/assets/rmpp-logo-space.jpg
  description: >-
   Learn how to start a small group
+link:
+ pdf: https://docs.google.com/document/d/1yltKHxdbwAaQMy-whKXzuP7BL-XBS0BSZfOWSgRY-a8/export?format=pdf
+ doc: https://docs.google.com/document/d/1yltKHxdbwAaQMy-whKXzuP7BL-XBS0BSZfOWSgRY-a8/edit?usp=sharing
+ pub: https://docs.google.com/document/d/e/2PACX-1vQxKdp5v6iEUMRFqAI0DNqFcWW93GOu4cfpsO_8mV4r3ibEAL_qM8lBGUHlG5NOWZ1kz4NT9hs1FkvN/pub
 ---
 
 <section class="section">
     <div class="container">
         <div class="columns is-centered">
+            <div class="column is-three-quarters">
+                {%- include breadcrumb.html -%}
+            </div>
+        </div>
+        <div class="columns is-centered">
             <div class="column is-half">
                 <h2 class="title">Getting Started Guide</h2>
                 <p>
-                    Below you'll find our Getting Started Guide, you can <a href="https://docs.google.com/document/d/1yltKHxdbwAaQMy-whKXzuP7BL-XBS0BSZfOWSgRY-a8/export?format=pdf" target="_blank">download a PDF version here</a>.
+                    Below you'll find our Getting Started Guide, you can <a href="{{ page.link.pdf }}" target="_blank">download a PDF version here</a>.
+                    You are also welcome to contribute comments and suggestions to the <a href="{{ page.link.doc }}">source document here</a>.
                 </p>
 
                 <hr>
 
-                {% include google-doc.html url="https://docs.google.com/document/d/e/2PACX-1vQxKdp5v6iEUMRFqAI0DNqFcWW93GOu4cfpsO_8mV4r3ibEAL_qM8lBGUHlG5NOWZ1kz4NT9hs1FkvN/pub" %}
+                {% include google-doc.html url=page.link.pub %}
 
             </div>
-            <aside class="column is-one-third has-text-centered">
+            <aside class="column is-one-quarter has-text-centered">
                 <img src="/pods/assets/rmpp-icon-wrench.jpg" alt="">
-                {% include btn.html href="https://docs.google.com/document/d/1yltKHxdbwAaQMy-whKXzuP7BL-XBS0BSZfOWSgRY-a8/export?format=pdf" class="button is-medium is-primary" text="Download PFD Guide" %}
+                {% include btn.html href=page.link.pdf class="button is-medium is-primary" text="Download PFD Guide" %}
                 <br><br>
                 {% include btn.html href="/pods/start" class="button is-medium is-success" text="Start a Pod" %}
                 {% include btn.html href="/pods/join" class="button is-medium is-danger" text="Join Pod" %}

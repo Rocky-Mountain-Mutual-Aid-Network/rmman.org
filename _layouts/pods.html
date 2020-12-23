@@ -7,26 +7,68 @@ nav:
  -
   name: About
   url: /pods/about
+  children:
+   -
+    name: Benefits
+    url: /pods/about/benefits
+   -
+    name: Norms
+    url: /pods/about/relating-norms
  -
   name: Join Pod
   url: /pods/join
  -
   name: Start Pod
   url: /pods/start
+  children:
+   -
+    name: Starter Guide
+    url: /pods/start/guide
  -
   name: Events
-  url: /pods/events/regenerative-relating-practice
+  url: /pods/events
+  children:
+   -
+    name: Relational Monday Call
+    url: /pods/events/regenerative-relating-practice
 ---
-
-<div class="container mt-6">
-    <div class="tabs">
-        <ul>
-            {% for nav in layout.nav %}
-            <li{% if nav.url == page.url %} class="is-active" {% endif %}><a
-                    href="{{ nav.url }}">{{ nav.name }}</a></li>
-            {% endfor %}
-        </ul>
+<section class="section">
+    <div class="container">
+        <nav class="navbar subnav podnav" role="navigation" aria-label="navigation" style="z-index: 29;">
+            <div class="navbar-brand">
+                <a href="/pods" class="navbar-item logo">
+                    <img src="{{ '/pods/assets/rmpp-logo-mini.png' | relative_url }}" alt="RMPP">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="podNavMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div class="navbar-menu" id="podNavMenu">
+                <div class="navbar-start">
+                    {% for nav in layout.nav %}
+                    {%- if nav.children -%}
+                        <div class="navbar-item has-dropdown is-hoverable">
+                            <a class="navbar-link {% if nav.url == page.url %}is-active{% endif %}"
+                            href="{{ nav.url }}">{{ nav.name }}</a>
+                        
+                            <div class="navbar-dropdown">
+                            {%- for child in nav.children -%}
+                                <a class="navbar-item {% if child.url == page.url %}is-active{% endif %}"
+                                href="{{ child.url }}">{{ child.name }}</a>
+                            {%- endfor -%}
+                            </div>
+                        </div>
+                    {%- else -%}
+                        <a class="navbar-item {% if nav.url == page.url %}is-active{% endif %}"
+                        href="{{ nav.url }}">{{ nav.name }}</a>
+                    {%- endif -%}
+                    {% endfor %}
+                </div>
+            </div>
+        </nav>
     </div>
-</div>
+</section>
 
 {{ content }}

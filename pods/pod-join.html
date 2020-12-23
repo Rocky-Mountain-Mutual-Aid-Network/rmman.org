@@ -14,6 +14,11 @@ og:
 <section class="section">
     <div class="container">
         <div class="columns is-centered">
+            <div class="column is-three-quarters">
+                {%- include breadcrumb.html -%}
+            </div>
+        </div>
+        <div class="columns is-centered">
             <div class="column is-half">
                 <h2 class="title">Join a Pod</h2>
                 <p>
@@ -28,7 +33,7 @@ og:
 
 
             </div>
-            <aside class="column is-one-third has-text-centered">
+            <aside class="column is-one-quarter has-text-centered">
                 <img src="/pods/assets/rmpp-icon-join.jpg" alt="">
                 <br>
                 {% include btn.html href="/pods/start" class="button is-medium is-success" text="Start a Pod" %}

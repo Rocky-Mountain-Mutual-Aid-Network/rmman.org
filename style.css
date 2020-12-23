@@ -24,12 +24,25 @@ nav .button.is-pod {
     background: #d1215a url(/pods/assets/rmpp-texture-red.jpg) no-repeat center top;
     font-weight: bold;
 }
-
 nav .button.is-pod:hover,
 nav .button.is-pod.is-active {
     background-position: center bottom;
     color: white;
 }
+
+a.button.is-pod.is-active:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 9px;
+    background: #d1215a;
+    bottom: -1rem;
+}
+
+.layout-pods > .navbar {
+    border-bottom: 2px solid #d1215a;
+}
+
 
 @media only screen and (max-width: 600px) {
     nav .navbar-brand .button {
@@ -37,16 +50,35 @@ nav .button.is-pod.is-active {
     }
 }
 @media only screen and (max-width: 1023px) {
-nav #navMenu {
+    nav #navMenu {
         position: absolute;
         top:0;
-        right:0;}
+        right:0;
+    }
+    /* SUB NAV */
+    .subnav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .subnav .navbar-burger {
+        margin-left: 0;
+    }
 }
 /* Notice */
 .notice {
     background-color: #dde;
     margin: 1rem;
     padding: 1rem;
+}
+
+/* CALENDAR */
+
+@media only screen and (max-width: 1023px) {
+    .fc .fc-toolbar.fc-header-toolbar {
+        margin-bottom: 1.5em;
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 /* Tabs */

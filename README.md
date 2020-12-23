@@ -51,6 +51,14 @@ You can build buttons using includes. They accept the following variables:
 {% include btn.html href="/covid" class="" text="See Resources" %}
 ```
 
+## Breadcrumbs
+
+Want breadcrumbs on the page? No problem! Just include `breadcrumb.html`
+
+```
+{%- include breadcrumb.html -%}
+```
+
 ## Embedding Google Doc Content
 
 This website makes use of published Googld Doc content. Javascript pulls the HTML of **published** Google Docs

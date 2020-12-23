@@ -35,7 +35,7 @@
     {%- endif -%}
 </head>
 
-<body class="has-navbar-fixed-top">
+<body class="has-navbar-fixed-top layout-{{ page.layout | default:'base' }}">
 
     {% include nav.html %}
 
