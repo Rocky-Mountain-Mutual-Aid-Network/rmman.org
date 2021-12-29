@@ -4,32 +4,7 @@
       <img src="{{ '/assets/brand/rmman-logo-website.png' | relative_url }}" alt="RMMAN" class="is-hidden-mobile">
       <img src="{{ '/assets/brand/rmman-logo-website-small.png' | relative_url }}" alt="RMMAN" class="is-hidden-tablet">
     </a>
-    <div class="navbar-item is-active">
-        <div class="buttons">
-          <!-- <a href="{{ 'request' | relative_url }}" class="button is-success">Request Aid</a> -->
-          <a href="{{ 'volunteer/delivery/' | relative_url }}" class="button is-success">Get/Deliver Food</a>
-          <a href="{{ 'helper' | relative_url }}" class="button is-info">Offer Aid</a>
-        </div>
-      </div>
-  </div>
-  <div class="navbar-menu" id="navMenu">
-    <div class="navbar-end">
-      <a href="{{ 'match-financial' | relative_url }}" class="navbar-item">View Requests</a>
-      <a href="{{ 'covid' | relative_url }}" class="navbar-item">COVID Resources</a>
-      <div class="navbar-item">
-        <div class="buttons">
-          <a href="{{ 'pods' | relative_url }}" class="button is-pod {% if page.layout == 'pods' %} is-active{% endif %}">Join a Pod</a>
-          <a href="{{ 'volunteer' | relative_url }}" class="button is-light">Volunteer</a>
-          <a href="https://opencollective.com/rmman" class="button is-primary" target="_blank">Donate!</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
+   
 </nav>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
